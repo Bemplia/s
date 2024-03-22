@@ -46,8 +46,10 @@ MainSection:NewButton("FullBright", "", function()
 end)
 
 MainSection:NewButton("Camera Hack", "", function()
-plr.CameraMaxZoomDistance = 9999
-plr.DevCameraOcclusion = Inviscam
+while game:GetService("RunService").RenderStepped:wait() do
+    plr.CameraMaxZoomDistance = 9999
+    plr.DevCameraOcclusion = Inviscam
+end
 end)
 
 MainSection:NewToggle("Freeze The Monster", "WOW", function(s)
