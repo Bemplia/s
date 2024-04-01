@@ -7,14 +7,14 @@ local UIS = game:GetService("UserInputService")
 local viewport = workspace.CurrentCamera.ViewportSize
 local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
 
-local house = "rbxassetid://16966368138"
-local movement = "rbxassetid://16974400761"
-local combat = "rbxassetid://16974583430"
-local teleport = "rbxassetid://16974424126"
-local user = "rbxassetid://16966420179"
-local explorer = "rbxassetid://16974092894"
-local theme = "rbxassetid://16967427403"
-local other = "rbxassetid://16974376846"
+house = "rbxassetid://16966368138"
+movement = "rbxassetid://16974400761"
+combat = "rbxassetid://16974583430"
+teleport = "rbxassetid://16974424126"
+user = "rbxassetid://16966420179"
+explorer = "rbxassetid://16974092894"
+theme = "rbxassetid://16967427403"
+other = "rbxassetid://16974376846"
 
 local Library = {}
 
@@ -174,6 +174,15 @@ function Library:new(options)
 		GUI["e"]["Size"] = UDim2.new(1, 0, 0, 10);
 		GUI["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 		GUI["e"]["Name"] = [[Hider]];
+		
+		-- StarterGui.MyLibrary.Main.Navigation.Hider
+		GUI["1b"] = Instance.new("Frame", GUI["c"]);
+		GUI["1b"]["BorderSizePixel"] = 0;
+		GUI["1b"]["BackgroundColor3"] = Color3.fromRGB(50, 50, 50);
+		GUI["1b"]["Size"] = UDim2.new(0, -10, 1, 0);
+		GUI["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+		GUI["1b"]["Position"] = UDim2.new(1, 0, 0, 0);
+		GUI["1b"]["Name"] = [[Hider]];
 
 		-- StarterGui.MyLibrary.Main.Navigation.ButtonHolder
 		GUI["f"] = Instance.new("ScrollingFrame", GUI["c"]);
